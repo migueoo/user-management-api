@@ -44,6 +44,11 @@ public class RoleServiceImpl implements RoleService {
         return null;
     }
 
+    @Override
+    public UserDto updateById(RoleUpdateForm form, Long id) {
+        return null;
+    }
+
 
     // Converter ENTITY to DTO
     private RoleDto convertToDto(RoleEntity roleEntity) {
