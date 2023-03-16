@@ -24,10 +24,11 @@ public class UserResource {
         this.userRepository = userRepository;
     }
 
+    // Criando um verbo http post
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void salvar(@RequestBody UserDto userDto) {
-        userService.salvar(userDto);
+    public void save(@RequestBody UserDto userDto) {
+        userService.createUser(userDto);
     }
 
 
