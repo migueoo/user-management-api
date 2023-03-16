@@ -3,13 +3,13 @@ package api.usermanagement.dto;
 import api.usermanagement.entity.RoleEntity;
 
 public class RoleDto {
-    private Long roleId;
+    private Long Id;
     //description = email
     private String description;
 
 
     public RoleDto(Long roleId, String description) {
-        this.roleId = roleId;
+        this.Id = Id;
         this.description = description;
     }
 
@@ -19,19 +19,19 @@ public class RoleDto {
     public RoleDto() {
     }
 
-    public Long getRoleId() {
-        return roleId;
+    public Long getId() {
+        return Id;
     }
 
-    public void setRoleId(Long id) {
-        this.roleId = roleId;
+    public void setId(Long id) {
+        this.Id = Id;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String email) {
+    public void setDescription(String description) {
         this.description = description;
     }
 

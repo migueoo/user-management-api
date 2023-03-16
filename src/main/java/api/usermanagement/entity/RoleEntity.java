@@ -10,26 +10,26 @@ public class RoleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long roleId;
+    private Long id;
 
     @Column(name = "description", nullable = false)
     private String description;
 
 
-    public RoleEntity(Long id, String email, String password) {
-        this.roleId = roleId;
+    public RoleEntity(Long id, String description) {
+        this.id = id;
         this.description = description;
     }
 
     public RoleEntity() {
     }
 
-    public Long getRoleId() {
-        return roleId;
+    public Long getId() {
+        return id;
     }
 
     public void setRoleId(Long id) {
-        this.roleId = roleId;
+        this.id = id;
     }
 
     public String getDescription() {
@@ -45,18 +45,18 @@ public class RoleEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         RoleEntity that = (RoleEntity) o;
-        return Objects.equals(roleId, that.roleId) && Objects.equals(description, that.description);
+        return Objects.equals(id, that.id) && Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(roleId, description);
+        return Objects.hash(id, description);
     }
 
     @Override
     public String toString() {
         return "RoleEntity{" +
-                "roleId=" + roleId +
+                "id=" + id +
                 ", description='" + description + '\'' +
                 '}';
     }
