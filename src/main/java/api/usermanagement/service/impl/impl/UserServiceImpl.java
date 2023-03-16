@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
-    public void salvar(UserDto userDto) {
+    public void createUser(UserDto userDto) {
         try {
             UserEntity userEntity = new UserEntity();
             userEntity.setEmail(userDto.getEmail().trim());
