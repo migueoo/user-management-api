@@ -1,5 +1,6 @@
 package api.usermanagement.service.impl;
 
+import api.usermanagement.dto.RoleDto;
 import api.usermanagement.dto.RoleUpdateForm;
 import api.usermanagement.dto.UserDto;
 import api.usermanagement.dto.UserUpdateForm;
@@ -10,13 +11,14 @@ import org.springframework.http.ResponseEntity;
 import java.util.Optional;
 
 public interface RoleService {
-    void saveRole(RoleService roleDto);
+    void save(RoleDto roleDto);
 
-    Optional<RoleEntity> findRoleId(Long id);
+    Optional<RoleEntity> findById(Long id);
 
     ResponseEntity<RoleEntity> updateRole(long id);
 
-    UserDto updateByRoleId(RoleUpdateForm form, Long roleId);
+    UserDto updateById(RoleUpdateForm form, Long roleId);
 
-    void deleteByRoleId(Long id);
+    void deleteById(Long id);
+
 }

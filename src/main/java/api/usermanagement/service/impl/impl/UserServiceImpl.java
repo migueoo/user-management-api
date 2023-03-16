@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService {
         this.userRepository = userRepository;
     }
 
+
     public void createUser(UserDto userDto) {
         try {
             UserEntity userEntity = new UserEntity();
@@ -70,6 +71,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    
     public void deleteById(Long id) {
         try {
             if (userRepository.existsById(id)) {
